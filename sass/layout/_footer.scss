@@ -1,0 +1,212 @@
+// .footer-container {
+//   display: flex;
+//   // align-items: baseline;
+//   // position: relative;
+// }
+
+.footer-container {
+  margin-left: 0;
+  margin-right: 0;
+  text-align: center;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-around;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: baseline;
+    position: relative;
+  }
+}
+
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: var(--bg-color);
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+.address-container {
+  text-align: center;
+  margin-right: 0;
+  margin-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+    margin-right: 70px;
+  }
+}
+.address,
+.address__list a {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.address__map {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--white-color);
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 9px;
+  }
+}
+
+.address__list a {
+  color: var(--grey-color);
+  text-decoration: none;
+}
+
+.address a {
+  &:hover,
+  &:focus {
+    color: var(--white-color);
+  }
+}
+
+.footer__logo {
+  display: block;
+  margin-bottom: 20px;
+  color: var(--white-color);
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.17;
+  text-decoration: none;
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.19;
+  }
+}
+
+.address__mail {
+  margin-bottom: 8px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 9px;
+  }
+}
+
+.social-footer__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
+}
+.social-footer__icon {
+  fill: var(--white-color);
+}
+
+.social-footer {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding-left: 0;
+  margin: 0 auto;
+}
+
+.social-footer-container {
+  margin-right: 0;
+
+  margin-bottom: 60px;
+  @media screen and (min-width: 798px) {
+    margin-bottom: 0;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+    margin-right: 93px;
+  }
+}
+
+.social-footer__item {
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.mail-form {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
+}
+
+.mail-container {
+  margin: 0 auto;
+}
+
+.mail-form__input {
+  padding-left: 16px;
+  margin-right: 0;
+  margin-bottom: 20px;
+  width: 450px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: transparent;
+  font-weight: 400px;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  &::placeholder {
+    font-weight: 400px;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+    margin-bottom: 0;
+    margin-right: 12px;
+  }
+}
+
+.button-mail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  border-radius: 4px;
+  border: none;
+  padding: 10px 29px;
+  min-width: 200px;
+  height: 50px;
+  color: var(--white-color);
+  background-color: var(--accent-color);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  text-align: center;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.send-icon {
+  margin-left: 10px;
+}

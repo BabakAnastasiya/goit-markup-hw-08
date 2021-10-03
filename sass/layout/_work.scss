@@ -1,0 +1,60 @@
+.work,
+.team {
+  margin-bottom: 30px;
+  color: var(--title-text-color);
+
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.18;
+
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.03em;
+  @media screen and (min-width: 1200px) {
+    font-size: 36px;
+    line-height: 1.17;
+    margin-bottom: 50px;
+  }
+}
+
+.work-list {
+  display: flex;
+}
+
+.work-list__photo {
+  position: relative;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.work-list__thumb {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+
+  justify-content: center;
+  align-items: center;
+}
+
+.work-list__name {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--white-color);
+}
+
+.work-section {
+  display: none;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    padding-bottom: 94px;
+  }
+}
