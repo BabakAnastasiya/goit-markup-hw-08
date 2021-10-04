@@ -53,7 +53,8 @@ h6 {
 }
 
 .container {
-  width: 100%;
+  width: 100vw;
+  min-width: 320px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
@@ -284,26 +285,35 @@ h6 {
   width: 100vw;
   height: 100vh;
   top: 0;
-  right: 0;
   background-color: white;
   padding-top: 48px;
-  padding-right: 15px;
-  padding-left: 40px;
+  padding-left: 20px;
   padding-bottom: 48px;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 480px) {
+  .mob-menu {
+    padding-left: 40px;
+  }
 }
 
 .mob-menu-list__item {
   font-weight: 500;
-  font-size: 40px;
+  font-size: 30px;
   line-height: 1.18;
   letter-spacing: 0.02em;
   padding: 0;
-  margin-bottom: 32px;
+  margin-bottom: 25px;
 }
 
-.mob-menu-list__item:last-child {
-  margin-bottom: 302px;
+@media screen and (min-width: 480px) {
+  .mob-menu-list__item {
+    font-size: 40px;
+    margin-bottom: 32px;
+  }
 }
 
 .mob-nav__link {
@@ -337,24 +347,37 @@ h6 {
 }
 
 .mob-auth-list {
+  margin-top: auto;
   margin-bottom: 64px;
 }
 
 .mob-auth-list__tel {
   font-weight: 500;
-  font-size: 34px;
+  font-size: 24px;
   line-height: 1.18;
   letter-spacing: 0.02em;
   color: var(--accent-color);
   text-decoration: none;
 }
 
+@media screen and (min-width: 480px) {
+  .mob-auth-list__tel {
+    font-size: 34px;
+  }
+}
+
 .mob-auth-list__mail {
   font-weight: 500;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 1.17;
   letter-spacing: 0.02em;
   color: #757575;
+}
+
+@media screen and (min-width: 480px) {
+  .mob-auth-list__mail {
+    font-size: 24px;
+  }
 }
 
 .mob-auth-list__item {
@@ -363,10 +386,16 @@ h6 {
 
 .mob-social-list__link {
   font-weight: 500;
-  font-size: 18px;
+  font-size: 12px;
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: #2196f3;
+}
+
+@media screen and (min-width: 480px) {
+  .mob-social-list__link {
+    font-size: 18px;
+  }
 }
 
 .mob-social-list {
@@ -590,12 +619,6 @@ h6 {
 
 @media screen and (min-width: 480px) {
   .advantage-list-wrap {
-    width: 300px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .advantage-list-wrap {
     width: 450px;
   }
 }
@@ -681,6 +704,7 @@ h6 {
 
 .team-section {
   background: var(--secondary-bg-color);
+  min-width: 320px;
   width: 100vw;
   padding-top: 60px;
   padding-bottom: 60px;
@@ -842,7 +866,7 @@ h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 210px;
+  width: 130px;
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -851,6 +875,12 @@ h6 {
 
 .partner-item:hover, .partner-item:focus {
   border: 1px solid var(--accent-color);
+}
+
+@media screen and (min-width: 480px) {
+  .partner-item {
+    width: 210px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -866,8 +896,15 @@ h6 {
 }
 
 .partner {
-  margin-left: 30px;
-  margin-top: 30px;
+  margin-left: 18px;
+  margin-top: 18px;
+}
+
+@media screen and (min-width: 480px) {
+  .partner {
+    margin-left: 30px;
+    margin-top: 30px;
+  }
 }
 
 .partner-logo {
@@ -882,12 +919,18 @@ h6 {
 
 .clients {
   font-weight: 700;
-  font-size: 28px;
+  font-size: 20px;
   line-height: 1.18;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
   margin-bottom: 30px;
+}
+
+@media screen and (min-width: 480px) {
+  .clients {
+    font-size: 28px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -900,10 +943,19 @@ h6 {
 
 .partner-list {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  flex-basis: calc(100% / 2-30px);
-  margin-left: -30px;
-  margin-top: -30px;
+  flex-basis: calc(100% / 2-18px);
+  margin-left: -18px;
+  margin-top: -18px;
+}
+
+@media screen and (min-width: 480px) {
+  .partner-list {
+    flex-basis: calc(100% / 2-30px);
+    margin-left: -30px;
+    margin-top: -30px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -939,7 +991,6 @@ h6 {
   padding-top: 60px;
   padding-bottom: 60px;
   background: var(--bg-color);
-  padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
 }
@@ -1307,6 +1358,7 @@ h6 {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
+  color: #757575;
 }
 
 .work-link {
@@ -1345,11 +1397,17 @@ h6 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 450px;
+  width: 300px;
   min-height: 609px;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1363,8 +1421,8 @@ h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
@@ -1379,18 +1437,37 @@ h6 {
   cursor: pointer;
 }
 
+@media screen and (min-width: 480px) {
+  .button-open {
+    width: 30px;
+    height: 30px;
+  }
+}
+
 .backdrop .form-info {
-  padding: 40px;
+  padding: 20px;
+}
+
+@media screen and (min-width: 480px) {
+  .backdrop .form-info {
+    padding: 40px;
+  }
 }
 
 .info {
   margin-bottom: 12px;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 17px;
   line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
+}
+
+@media screen and (min-width: 480px) {
+  .info {
+    font-size: 20px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1489,10 +1566,16 @@ h6 {
   align-items: center;
   justify-content: center;
   font-weight: normal;
-  font-size: 12px;
+  font-size: 9px;
   line-height: 1.17;
   letter-spacing: 0.03em;
   color: #757575;
+}
+
+@media screen and (min-width: 480px) {
+  .checkbox-label {
+    font-size: 12px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1515,5 +1598,21 @@ h6 {
   display: flex;
   justify-content: center;
   margin-top: 30px;
+}
+
+.form-info__label,
+.form-comment-label {
+  font-size: 11px;
+}
+
+@media screen and (min-width: 480px) {
+  .form-info__label,
+  .form-comment-label {
+    font-size: 12px;
+  }
+}
+
+.modal-agree {
+  line-height: 1.7;
 }
 /*# sourceMappingURL=main.css.map */

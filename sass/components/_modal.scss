@@ -17,12 +17,15 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 450px;
+  width: 300px;
   min-height: 609px;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
   @media screen and (min-width: 1200px) {
     min-width: 528px;
     min-height: 581px;
@@ -32,8 +35,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
@@ -46,22 +49,32 @@
     fill: var(--accent-color);
     cursor: pointer;
   }
+  @media screen and (min-width: 480px) {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .backdrop {
   .form-info {
-    padding: 40px;
+    padding: 20px;
+    @media screen and (min-width: 480px) {
+      padding: 40px;
+    }
   }
 }
 
 .info {
   margin-bottom: 12px;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 17px;
   line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
+  @media screen and (min-width: 480px) {
+    font-size: 20px;
+  }
   @media screen and (min-width: 1200px) {
     line-height: 1.15;
   }
@@ -153,10 +166,13 @@
   align-items: center;
   justify-content: center;
   font-weight: normal;
-  font-size: 12px;
+  font-size: 9px;
   line-height: 1.17;
   letter-spacing: 0.03em;
   color: #757575;
+  @media screen and (min-width: 480px) {
+    font-size: 12px;
+  }
   @media screen and (min-width: 1200px) {
     font-size: 14px;
     line-height: 1.71;
@@ -176,4 +192,16 @@
   display: flex;
   justify-content: center;
   margin-top: 30px;
+}
+
+.form-info__label,
+.form-comment-label {
+  font-size: 11px;
+  @media screen and (min-width: 480px) {
+    font-size: 12px;
+  }
+}
+
+.modal-agree {
+  line-height: 1.7;
 }
